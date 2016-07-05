@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  sAppLink = 'app://endpoint';
+  sStaticLink = 'https://static_endpoint_if_no_app';
+
+  if(window.innerWidth < 600){
+    window.location.href = sAppLink;
+    setTimeout(function() { document.location.href = sStaticLink; }, 10000);
+  }
+  else {
+    document.location.href = sStaticLink;
+  }
+  //Optionally used for closing browser redirect if app is not installed.
+  //setTimeout(function(){window.close();}, 5000);
+</script>
+</head>
+</html>
