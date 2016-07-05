@@ -10,6 +10,8 @@
 
   if(window.innerWidth < 600){
     window.location.href = sAppLink;
+    
+    //10 seconds is used for iOS Safari pop-up for launching app
     setTimeout(function() { document.location.href = sStaticLink; }, 10000);
   }
   else {
